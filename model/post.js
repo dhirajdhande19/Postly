@@ -4,11 +4,15 @@ const Schema = mongoose.Schema;
 
 const postSchema = new Schema ({
     title : String,
+    subtitle: String,
     content: String,
-    summary : String,
-    publishedAt : String,
+    publishedAt : {
+        type: Date,
+        default: Date.now(),
+    },
     claps: Number,
     commentsCount: Number,
+    imageUrl: String,
 });
 
 const Post = mongoose.model("Post", postSchema);

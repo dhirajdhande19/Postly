@@ -93,3 +93,107 @@
     margin: 1rem 5rem 1rem;
     border: none;
 }
+
+#write-post {
+    font-size: 1.1rem;
+}
+
+.post-info {
+    display: flex;
+}
+
+.post-info p {
+    padding-inline: 0.6rem;
+    margin-inline: 0.6rem;
+}
+
+.post-info i {
+    opacity: 0.6;
+}
+
+.post-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.data a {
+    text-decoration: none;
+}
+
+.images {
+    height: 150px;
+    width: 200px;
+    border-radius: 4px;
+}
+
+/* Show page */
+.post-continer {
+    margin: 0 auto;
+    margin-top: 8rem;
+    height: 100vh;
+    width: 40%;
+}
+
+.post-continer h4{ 
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+#main-content {
+    margin-top: 4rem;
+    font-size: 1.5rem;
+}
+
+.data-image {
+    height: 350px;
+    width: 70%;
+    margin-top: 1rem;
+    border-radius: 3px;
+}
+
+.data-line {
+    margin-bottom: 1.1rem;
+    height: 1px;
+    border: none;
+    background-color: rgb(233, 233, 233);
+}
+
+i {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+i:hover {
+    opacity: 1;
+}
+
+.edit-btn, .create-btn, .delete-btn{
+    border: none;
+    background-color: #fff;
+}
+
+.title, .subtitle, .content {
+    width: 100%;
+    font-size: 1.5rem;
+    border: 2px solid rgb(241, 241, 241);
+    border-radius: 5px;
+    padding: 1rem;
+} 
+.title, .subtitle {
+    height: 3rem;
+}
+
+#content {
+    height: 450px
+}
+
+#title, #subtitle {
+    height: 7rem;
+}
+
+.title:focus, .subtitle:focus, .content:focus {
+    outline: none;
+    border: 2px solid rgb(209, 209, 209);
+} 

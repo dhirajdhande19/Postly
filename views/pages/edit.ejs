@@ -1,0 +1,10 @@
+<% layout("layout/boilerplate") %>
+
+<div class="post-continer">
+    <form action="/post/<%= post._id %>/edit?_method=PUT" method="POST">
+        <textarea name="title" id="title" class="title"><%= post.title %></textarea><br><br>
+        <textarea name="subtitle" id="subtitle" class="subtitle"><%= post.subtitle %></textarea><br><br>
+        <textarea name="content" id="content" class="content"><%= post.content %></textarea><br><br>
+        <button class="btn btn-success">Update</button>
+    </form>
+</div>
