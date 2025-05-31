@@ -9,7 +9,7 @@
 - 📝 Add new posts  
 - ✏️ Edit existing posts  
 - 🗑️ Delete posts
-- 🧾 Add **reviews** under posts  
+- 🧾 Add and Delete **reviews** under posts  
 - 🎨 Responsive design with Bootstrap  
 - ✅ Basic input validation (no empty data allowed — even via API tools like Hoppscotch) 
 - ⚠️ Friendly custom error pages  
