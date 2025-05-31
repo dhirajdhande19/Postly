@@ -6,6 +6,8 @@
 
 ## ✨ Features
 
+- 🔐 **User registration** & **login**  
+- 🚪 **Logout** functionality  
 - 📝 Add new posts  
 - ✏️ Edit existing posts  
 - 🗑️ Delete posts
@@ -18,8 +20,6 @@
 
 ## 🔮 Upcoming Features
 
-- 🔐 **User registration** & **login**  
-- 🚪 **Logout** functionality  
 - ❤️ Like & bookmark posts  
 - 🧠 AI-generated suggestions *(stretch goal)*
 
