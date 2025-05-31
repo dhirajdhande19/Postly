@@ -8,7 +8,8 @@
 
 - 📝 Add new posts  
 - ✏️ Edit existing posts  
-- 🗑️ Delete posts  
+- 🗑️ Delete posts
+- 🧾 Add **reviews** under posts  
 - 🎨 Responsive design with Bootstrap  
 - ✅ Basic input validation (no empty data allowed — even via API tools like Hoppscotch) 
 - ⚠️ Friendly custom error pages  
@@ -17,7 +18,6 @@
 
 ## 🔮 Upcoming Features
 
-- 🧾 Add user **reviews** under posts  
 - 🔐 **User registration** & **login**  
 - 🚪 **Logout** functionality  
 - ❤️ Like & bookmark posts  
