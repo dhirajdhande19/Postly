@@ -1,4 +1,4 @@
-const sample = require("./sample");
+const initData = require("./sample");
 const Post = require("../model/post");
 const mongoose = require("mongoose");
 
@@ -14,7 +14,11 @@ async function main() {
 
 const initDB = async () => {
     await Post.deleteMany({});
-    await Post.insertMany(sample);
+    initData.data = initData.data.map((obj) => ({
+      ...obj,
+      owner: "683b500f3f389808bba45c30",
+    }))
+    await Post.insertMany(initData.data);
     console.log("data initialized");
 };
 

@@ -23,6 +23,15 @@
       <span><i class="fa-solid fa-bell fs-5"></i></span>
       <span><i class="fa-solid fa-user"></i></span>
     </div>
+    <div class="navbar-nav ms-auto">
+      <% if (!currUser) { %>
+        <a href="/signup" class="nav-link">Sign up</a>
+        <a href="/login" class="nav-link">Login</a>
+      <% } %> <% if (currUser) { %> 
+        <a href="/logout" class="nav-link">Logout</a>
+      <% } %>
+
+    </div>
     </div>
   </div>
 </nav>

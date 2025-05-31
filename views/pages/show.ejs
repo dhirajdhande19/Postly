@@ -7,16 +7,21 @@
             <div class="post-info offset-4">
                 <p><i class="fa-solid fa-hands-clapping"></i> <%= post.claps %></p>
                 <p><i class="fa-solid fa-comment"></i> <%= post.commentsCount %></p>
-                <form action="/post/<%= post._id %>/edit" method="GET">
-                    <button class="edit-btn">
-                        <p><i class="fa-solid fa-pen"></i></p>
-                    </button>
-                </form>
-                <form action="/post/<%= post._id %>/delete?_method=DELETE" method="POST">
-                    <button class="delete-btn">
-                        <p><i class="fa-solid fa-trash"></i></p>
-                    </button>
-                </form>
+                <% if(currUser && post.owner._id.equals(currUser._id)) { %>
+                    <form action="/post/<%= post._id %>/edit" method="GET">
+                        <button class="edit-btn">
+                            <p><i class="fa-solid fa-pen"></i></p>
+                        </button>
+                    </form>
+                    <form action="/post/<%= post._id %>/delete?_method=DELETE" method="POST">
+                        <button class="delete-btn">
+                            <p><i class="fa-solid fa-trash"></i></p>
+                        </button>
+                    </form>
+                <% } %>
+
+
+
             </div>
         <div class="data-line"></div>
         <% if(post.imageUrl) { %>
@@ -27,18 +32,21 @@
 
         <div class="review-block">
             <h1 class="offset-2 mb-5 p-3">All Reviews</h1>
-            <form action="/post/<%= post._id %>/review" method="POST">
-                <input name="review[comment]" class="form-control" type="text" placeholder="Add Review" required><br><br>
-                <input name="review[rating]" type="range" class="form-range" min="1" max="5" id="customRange2"><br><br>
-                <button class="btn btn-success">Submit</button>
-            </form>
+            <% if(currUser) { %>
+                <form action="/post/<%= post._id %>/review" method="POST">
+                    <input name="review[comment]" class="form-control" type="text" placeholder="Add Review" required><br><br>
+                    <input name="review[rating]" type="range" class="form-range" min="1" max="5" id="customRange2"><br><br>
+                    <button class="btn btn-success">Submit</button>
+                </form>
+            <% } %>
+
         </div>
 
 
         <div class="all-reviews">
             <% for (let review of post.reviews) { %>
                 <div class="review mt-2 p-3">
-                    <h3>@Anonymous</h3>
+                    <i><b>@<%= review.author.username %></b></i>
                     <p><%= review.createdAt.toLocaleDateString('en-GB', {day: 'numeric', month: 'long', year: 'numeric'}) %></p>
                     <p><%= review.comment %></p>
                     <p><%= review.rating %> Star</p>

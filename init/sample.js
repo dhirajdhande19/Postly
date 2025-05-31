@@ -92,4 +92,4 @@ const sample = [
 ]
 ;
 
-module.exports = sample;
+module.exports = {data: sample};
