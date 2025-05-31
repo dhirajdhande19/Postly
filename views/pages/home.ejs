@@ -22,11 +22,13 @@
 
     <% for (let post of allPosts) { %>
         <div class="data">
-            <a href="/show/<%= post._id %>">
+            <a href="/post/<%= post._id %>">
                 <div class="card">
                     <div class="post-top">
-                        <h4><b><%= post.title %></b></h4>
-                        <p><%= post.subtitle%></p>
+                        <div class="inner-post-top">
+                            <h4><b><%= post.title %></b></h4>
+                            <p><%= post.subtitle%></p>
+                        </div>
                             <% if( post.imageUrl ) { %>
                                 <img class="images" src="<%= post.imageUrl %>">
                             <% } %>   

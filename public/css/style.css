@@ -111,12 +111,12 @@
     opacity: 0.6;
 }
 
-.post-top {
+/* .post-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-}
+} */
 
 .data a {
     text-decoration: none;
@@ -197,3 +197,33 @@ i:hover {
     outline: none;
     border: 2px solid rgb(209, 209, 209);
 } 
+
+.main-content {
+    margin-bottom: 5rem;
+}   
+
+
+.gap {
+    height: 12rem;
+}
+
+.review {
+    gap: 1rem;
+}
+
+.review h3, p {
+    padding: 0;
+    margin: 0 auto;
+}
+
+.data {
+    padding: 1rem;
+}
+
+.post-top {
+    display: flex;
+}
+
+.inner-post-top {
+    width: 70%;
+}

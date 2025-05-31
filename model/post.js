@@ -13,6 +13,12 @@ const postSchema = new Schema ({
     claps: Number,
     commentsCount: Number,
     imageUrl: String,
+    reviews: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Review",
+        },
+    ],
 });
 
 const Post = mongoose.model("Post", postSchema);

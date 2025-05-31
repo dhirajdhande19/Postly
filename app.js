@@ -1,6 +1,7 @@
 const express = require("express");
 const app =  express();
 const Post = require("./model/post");
+const Review = require("./model/review");
 const path = require("path");
 const ejsMate = require("ejs-mate");
 const methodOverride =  require("method-override");
@@ -53,10 +54,10 @@ app.get("/home", WrapAsync(
 ));
 
 // Show Route (For specific Posts)
-app.get("/show/:id", WrapAsync(
+app.get("/post/:id", WrapAsync(
     async (req, res) => {
     const {id} = req.params;
-    const post = await Post.findById(id);
+    const post = await Post.findById(id).populate("reviews");
     res.render("pages/show", { id, post });
 }
 ));
@@ -93,7 +94,7 @@ app.put("/post/:id/edit", validatePost, WrapAsync(
     const {id} = req.params;
     const updatedData = req.body;
     await Post.findByIdAndUpdate(id, updatedData);
-    res.redirect(`/show/${id}`);
+    res.redirect(`/post/${id}`);
 }
 ));
 
@@ -105,6 +106,28 @@ app.delete("/post/:id/delete", WrapAsync(
     res.redirect("/home");
 }
 ));
+
+// Review Route
+
+// Create route
+app.post("/post/:id/review", async (req, res) => {
+    let post = await Post.findById(req.params.id).populate("reviews");
+    let newReview = new Review(req.body.review);
+    post.reviews.push(newReview);
+
+    await newReview.save();
+    await post.save();
+    res.redirect(`/post/${req.params.id}`);
+});
+
+// Delete route
+app.delete("/post/:id/review/:reviewId", async (req, res) => {
+    let { id, reviewId } = req.params;
+
+    await Post.findByIdAndUpdate(id, {$pull: {reviews: reviewId}});
+    await Review.findByIdAndDelete(reviewId);
+    res.redirect(`/post/${id}`);
+})
 
 app.all(/.*/, (req, res, next) => {
     // res.send("Page Not Found!");

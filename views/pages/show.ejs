@@ -23,4 +23,33 @@
             <img class="data-image offset-2" src="<%= post.imageUrl %>">
         <% } %>
         <p id="main-content">this is data <%= post.content %></p>
+        <br>
+
+        <div class="review-block">
+            <h1 class="offset-2 mb-5 p-3">All Reviews</h1>
+            <form action="/post/<%= post._id %>/review" method="POST">
+                <input name="review[comment]" class="form-control" type="text" placeholder="Add Review" required><br><br>
+                <input name="review[rating]" type="range" class="form-range" min="1" max="5" id="customRange2"><br><br>
+                <button class="btn btn-success">Submit</button>
+            </form>
+        </div>
+
+
+        <div class="all-reviews">
+            <% for (let review of post.reviews) { %>
+                <div class="review mt-2 p-3">
+                    <h3>@Anonymous</h3>
+                    <p><%= review.createdAt.toLocaleDateString('en-GB', {day: 'numeric', month: 'long', year: 'numeric'}) %></p>
+                    <p><%= review.comment %></p>
+                    <p><%= review.rating %> Star</p>
+                    <form action="/post/<%= post._id %>/review/<%= review._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+                <div class="data-line"></div>
+            <% } %>
+        </div>
+        <div class="gap"></div>
 </div>
+
+
