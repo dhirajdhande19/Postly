@@ -21,6 +21,17 @@ and responsiveness.
 
 ## 🛠️ Technology Stack
 
+<div align="center">
+
+<!-- Skillicons -->
+<img src="https://skillicons.dev/icons?i=js,nodejs,express,mongodb,css" alt="Tech Stack Icons" />
+
+<!-- Custom EJS Badge -->
+<br/>
+<img src="https://img.shields.io/badge/EJS-8C8C8C?style=for-the-badge&logo=javascript&logoColor=white" alt="EJS Badge"/>
+
+</div>
+
 * **Backend:** Node.js, Express.js
 * **Templating:** EJS for server-side rendering
 - **Database:** MongoDB Atlas (cloud-hosted)
@@ -33,7 +44,7 @@ and responsiveness.
 
 ## 🚀 Live Demo
 
-Check out Postly in action: [https://your-live-link.com](https://your-live-link.com)
+Check out Postly in action: [Postly Live Site](https://postly-t64r.onrender.com)
 
 ---
 
