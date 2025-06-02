@@ -6,7 +6,10 @@ const sample = [
     "publishedAt": "2025-05-30T10:00:00Z",
     "claps": 250,
     "commentsCount": 12,
-    "imageUrl": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: {
+      filename: "",
+      url: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
   },
   {
     "title": "Understanding Asynchronous JavaScript",
@@ -15,7 +18,10 @@ const sample = [
     "publishedAt": "2025-04-20T09:30:00Z",
     "claps": 180,
     "commentsCount": 8,
-    "imageUrl": "https://images.unsplash.com/photo-1591267990532-e5bdb1b0ceb8?q=80&w=1427&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: {
+      filename: "",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLj9FZa1QJEzr36DdQNXQHc8b_WlRg6dKujQ&s"
+    },
   },
   {
     "title": "CSS Grid vs Flexbox: When to Use Which",
@@ -24,7 +30,10 @@ const sample = [
     "publishedAt": "2025-03-15T14:00:00Z",
     "claps": 300,
     "commentsCount": 15,
-    "imageUrl": "https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: {
+      filename: "",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLj9FZa1QJEzr36DdQNXQHc8b_WlRg6dKujQ&s"
+    },
   },
   {
     "title": "Building REST APIs with Node.js and Express",
@@ -33,7 +42,10 @@ const sample = [
     "publishedAt": "2025-02-10T16:45:00Z",
     "claps": 220,
     "commentsCount": 20,
-    "imageUrl": "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: {
+      filename: "",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLj9FZa1QJEzr36DdQNXQHc8b_WlRg6dKujQ&s"
+    },
   },
   {
     "title": "Introduction to MongoDB for Beginners",
@@ -42,7 +54,10 @@ const sample = [
     "publishedAt": "2025-01-25T11:15:00Z",
     "claps": 170,
     "commentsCount": 7,
-    "imageUrl": "https://images.unsplash.com/photo-1658204238967-3a81a063d162?q=80&w=1462&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: {
+      filename: "",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLj9FZa1QJEzr36DdQNXQHc8b_WlRg6dKujQ&s"
+    },
   },
   {
     "title": "Effective Debugging Techniques in JavaScript",
@@ -51,7 +66,10 @@ const sample = [
     "publishedAt": "2025-05-05T13:00:00Z",
     "claps": 195,
     "commentsCount": 10,
-    "imageUrl": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: {
+      filename: "",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLj9FZa1QJEzr36DdQNXQHc8b_WlRg6dKujQ&s"
+    },
   },
   {
     "title": "Getting Started with Bootstrap 5",
@@ -60,7 +78,10 @@ const sample = [
     "publishedAt": "2025-04-01T08:20:00Z",
     "claps": 160,
     "commentsCount": 5,
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfNQZYlf5mLG-qXogTV8NY0t_I_4ZEGuniTg&s"
+    image: {
+      filename: "",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLj9FZa1QJEzr36DdQNXQHc8b_WlRg6dKujQ&s"
+    },
   },
   {
     "title": "Top 10 JavaScript ES6 Features You Should Know",
@@ -69,7 +90,10 @@ const sample = [
     "publishedAt": "2025-03-10T12:00:00Z",
     "claps": 280,
     "commentsCount": 18,
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSFaSBMQu4cTfPsig8urWgIH2JTJSXpg1D7Q&s"
+    image: {
+      filename: "",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLj9FZa1QJEzr36DdQNXQHc8b_WlRg6dKujQ&s"
+    },
   },
   {
     "title": "Deploying Your Node.js App to Heroku",
@@ -78,7 +102,10 @@ const sample = [
     "publishedAt": "2025-02-28T15:30:00Z",
     "claps": 210,
     "commentsCount": 9,
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLj9FZa1QJEzr36DdQNXQHc8b_WlRg6dKujQ&s"
+    image: {
+      filename: "",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLj9FZa1QJEzr36DdQNXQHc8b_WlRg6dKujQ&s"
+    },
   },
   {
     "title": "Understanding REST vs GraphQL APIs",
@@ -87,7 +114,10 @@ const sample = [
     "publishedAt": "2025-01-15T10:45:00Z",
     "claps": 230,
     "commentsCount": 14,
-    "imageUrl": "https://blog.postman.com/wp-content/uploads/2023/12/GraphQL-vs-REST-1.jpg"
+    image: {
+      filename: "",
+      url: "https://blog.postman.com/wp-content/uploads/2023/12/GraphQL-vs-REST-1.jpg"
+    },
   }
 ]
 ;

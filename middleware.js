@@ -23,7 +23,7 @@ module.exports.saveRedirectUrl = (req, res, next) => {
 module.exports.isOwner = async (req, res, next) => {
     const {id} = req.params;
     let post = await Post.findById(id);
-    if(!post.owner._id.equals(res.locals.currUser._id)) {
+    if(!post.owner._id.equals(res.locals.currUser._id)) { // Checks if user is the actual owner of what he says he is
         req.flash("error", "you are not the owner");
         return res.redirect(`/post/${id}`);
     }

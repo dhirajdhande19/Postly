@@ -11,9 +11,11 @@ const postSchema = new Schema ({
         type: Date,
         default: Date.now(),
     },
-    claps: Number,
     commentsCount: Number,
-    imageUrl: String,
+    image: {
+       url: String,
+       filename: String,
+      },
     reviews: [
         {
             type: Schema.Types.ObjectId,
@@ -26,6 +28,7 @@ const postSchema = new Schema ({
     }
 });
 
+// This is used to delete all the associated reviews if the associated post is deleted
 postSchema.post("findOneAndDelete", async (post) => {
     if (post) {
         await Review.deleteMany({ _id : {$in: post.reviews} });
