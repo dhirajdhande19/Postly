@@ -1,0 +1,32 @@
+<% layout("layout/boilerplate") %>
+
+<div class="container">
+    <div class="all-post mt-5">
+        <% for (let post of allPosts) { %>
+            <div class="post">
+                <a href="/post/<%= post._id %>">
+                    <div class="top-slide">
+                        <div class="top-most">
+                            <h4><b><%= post.title %></b></h4>
+                            <p><%= post.subtitle%></p>
+                        </div>
+
+                        <% if( post.image ) { %>
+                            <img class="images" src="<%= post.image.url %>" alt="<%= post.image.filename %>">
+                        <% } %>  
+                    </div>
+                    <div class="bottom-slide">
+                        <p><%= post.publishedAt.toLocaleDateString('en-GB', {day: 'numeric', month: 'long', year: 'numeric'}) %> </p>
+                        <p><i class="fa-solid fa-comment"></i> <%= post.reviews.length %></p>
+                    </div>
+
+                </a>
+                <hr>
+            </div>
+
+        <% } %>
+    </div>
+</div>
+
+
+
